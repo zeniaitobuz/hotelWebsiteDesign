@@ -1,0 +1,682 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.main-body{
+  display: flex;
+  flex-direction: column;
+}
+.blue-texts {
+  color: rgb(9, 9, 93);
+}
+.btn-blue {
+  background-color: rgb(9, 9, 93);
+}
+.navbar {
+  margin: 0 5vw 0 5vw;
+}
+.navbar-brand {
+  color: rgb(9, 9, 93);
+  font-size: 3.5rem;
+  font-weight: 300;
+  position: relative;
+  left: -2vw;
+  top: 1vh;
+}
+.navbar-brand p {
+  color: rgb(9, 9, 93);
+  font-weight: light;
+  position: relative;
+  font-size: 1rem;
+  left: 1vw;
+}
+.navbar-nav {
+  color: rgb(9, 9, 93);
+  position: relative;
+  left: 20vw;
+  gap: 1.5vw;
+}
+.navbar-collapse  button{
+  width: 10vw;
+  height: 7vh;
+  position: relative;
+  left: -7vw;
+}
+.en-img {
+  position: relative;
+  top: -0.1vh;
+  width: 4vw;
+}
+.bag-img {
+  position: relative;
+  top: -1vh;
+}
+.topBanner {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size:auto;
+  width: 100%;
+  
+}
+.topBanner h1 {
+  font-weight: 500;
+}
+.quiet-text {
+  font-weight: 400;
+}
+.topBanner h1,
+.quiet-text {
+  max-width: fit-content;
+  position: relative;
+  top: 3vh;
+  left: 5vw;
+  color: rgb(255, 255, 255);
+}
+.topBanner button {
+  width: 25vw;
+  position: relative;
+  top: 3vh;
+  left: 5vw;
+}
+.view-home {
+  max-width: fit-content;
+  color: white;
+  position: relative;
+  font-weight: 400;
+  left: 6vw;
+  top: 5vh;
+}
+
+.form {
+  display: flex;
+  height: 60vh;
+  width: 90vw;
+  background-color: white;
+  position: relative;
+  align-items: center;
+  padding: 2vh;
+  left: 5vw;
+  top: 5vh;
+  margin-bottom: 10vh;
+}
+.check-form-in {
+  position: relative;
+  top: 4vh;
+  left: -19.6vw;
+  width: 35vw;
+}
+.check-form-out {
+  position: relative;
+  top: 4vh;
+  left: -31.6vw;
+  width: 35vw;
+}
+.adults,
+.children {
+  position: relative;
+  top: 2.9vh;
+  width: 70vw;
+}
+.check-date {
+  display: flex;
+  flex-direction: row;
+}
+.checkout-date{
+  position: relative;
+  left: -11vw;
+}
+
+.avail-btn {
+  background-color: rgb(9, 9, 93);
+  color: white;
+  position: relative;
+  width: 50vw !important;
+  left: 3vw !important;
+  top: 2vh !important;
+}
+.welcome{
+  height: 40vh;
+  width: 40vw;
+  position: relative;
+  top: 4vh;
+  margin: 0 5vw 0 5vw;
+}
+.welcome-text{
+  color: rgb(9, 9, 93);
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+.mikalto-heading{
+  font-weight: 200;
+}
+.welcome-para{
+  font-weight: 100;
+  font-size: 0.5rem;
+}
+.sign{
+  width: 35vw;
+}
+.images-together{
+  position: relative;
+}
+.portrait-img{
+  position: absolute;
+  width: 30vw;
+  top: -45vh;
+  left: 45vw;
+}
+.hotel-img{
+  position: absolute;
+  width: 40vw;
+  top: -28vh;
+  left: 50vw;
+}
+.landscape-img{
+  position: absolute;
+  width: 40vw;
+  top: -15vh;
+  left: 45vw;
+}
+ 
+.slider{
+  position: relative;
+  top: 15vh;
+}
+.details{
+  background-color: rgb(9, 9, 93);
+  padding: 5vh;
+  color: white;
+}
+.details button{
+  position: relative;
+  bottom: -1vh;
+  width: 25vw;
+  height: 7vh;
+  background: transparent;
+  border: 2px solid #fff;
+  color: white;
+}
+.elegance{
+  font-size: 0.8rem;
+  position: relative;
+  top: 1vh;
+  color: #f1a18d;
+}
+.details h2{
+  font-size: 2rem;
+  font-weight: 200;
+}
+.room-detail{
+  font-size: 0.7rem;
+  font-weight: 100;
+}
+.details-grid{
+  position: relative;
+  left: -3vw;
+  font-weight: 200;
+}
+.swiper {
+  width: 108vw;
+  position: relative;
+  left: -4vw;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 108vw;
+  height: fit-content;
+  object-fit: cover;
+}
+.choose{
+  width: 50vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  top: 15vh;
+}
+.facilities h2{
+  font-size: 1.5rem;
+  font-weight: 500;
+  position: relative;
+  top: 18vh;
+  left: 5vw;
+}
+.food p,
+.gym p,
+.location p{
+  color: grey;
+}
+.facility-img{
+  width: 25vw;
+}
+.food img,
+.food p,
+.food h2{
+  position: relative;
+  left: -7vw;
+}
+.gym img,
+.gym p,
+.gym h2{
+  position: relative;
+  left: 0vw;
+}
+.location img{
+  width: 25vw;
+  height: 12vh;
+}
+.location img,
+.location h2,
+.location p{
+  position: relative;
+  left: 5vw;
+}
+.food,
+.gym,
+.location{
+  position: relative;
+  top: 3vh;
+  left: 13vh;
+}
+.food h2,
+.gym h2,
+.location h2{
+  position: relative;
+  top: 1vh;
+
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.food p,
+.gym p,
+.location p{
+  font-size: 0.6rem;
+}
+
+.activity-img{
+  width:40vh;
+}
+
+.full-activity{
+  display: flex;
+  flex-direction: column;
+}
+.smile,
+.experience{
+  width: 40vw;
+  background-color:  rgb(9, 9, 93);
+  color: white;
+}
+/* For Desktop View */
+@media screen and (min-width: 1024px) {
+  .topBanner {
+    width: 100vw;
+    height: 100vh;
+  }
+  .form{
+    position: relative;
+    top: -20vh;
+    left: 45vw;
+    width: 40vw;
+  }
+  .top-texts{
+    position: relative;
+    top: 15vh;
+    left: 5vw;
+  }
+  .topBanner button {
+    width: 10vw;
+    position: relative;
+    top: 5vh;
+    left: 5vw;
+  }
+  .view-home {
+    max-width: fit-content;
+    color: white;
+    position: relative;
+    font-size: 1rem;
+    font-weight: 700;
+    left: 18vw;
+    top: 12vh;
+  }
+
+.check-form-in {
+  position: relative;
+  top: 4vh;
+  left: -5vw;
+  width: 15vw;
+}
+.check-form-out {
+  position: relative;
+  top: 4vh;
+  left: -6.5vw;
+  width: 15vw;
+}
+.adults,
+.children {
+  width: 38vw;
+}
+.check-date {
+  display: flex;
+  flex-direction: row;
+}
+.checkout-date{
+  position: relative;
+  left: -1vw;
+}
+.avail-btn {
+  position: relative;
+  width: 30vw !important;
+  left: 5vw !important;
+}
+
+.welcome-text{
+  position: relative;
+  top: 10vh;
+  color: rgb(9, 9, 93);
+  font-weight: 300;
+  font-size: 1.5rem;
+  margin-left: 5vw;
+}
+.mikalto-heading{
+  position: relative;
+  top: 10vh;
+  font-weight: 200;
+  margin-left: 5vw;
+}
+.welcome-para{
+  position: relative;
+  top: 10vh;
+  color: rgb(168, 168, 168);
+  font-weight: 300;
+  font-size: 1rem;
+  margin-left: 5vw;
+}
+.sign{
+  position: relative;
+  top: 10vh;
+}
+.images-together{
+  position: relative;
+}
+.portrait-img{
+  position: absolute;
+  width: 20vw;
+  top: -65vh;
+  left: 45vw;
+}
+.hotel-img{
+  position: absolute;
+  width: 30vw;
+  top: -45vh;
+  left: 60vw;
+}
+.landscape-img{
+  position: absolute;
+  width: 25vw;
+  top: -15vh;
+  left: 50vw;
+}
+.details{
+  position: relative;
+  top: 70vh;
+  width: 35vw;
+  height: 90vh;
+  left: 1vw;
+}
+.details button{
+  position: relative;
+  bottom: -18vh;
+  width: 15vw;
+  height: 7vh;
+}
+.elegance{
+  font-size: 1.8rem;
+}
+.details h2{
+  position: relative;
+  top: 5vh;
+  font-size: 4rem;
+  font-weight: 100;
+}
+.room-detail{
+  font-size: 1.7rem;
+  position: relative;
+  top: 9vh;
+}
+.details-grid{
+  position: relative;
+  left: 0vw;
+  top: 15vh;
+  font-size: 1rem;
+  font-weight: 300;
+}
+.swiper {
+  width: 65vw;
+  position: relative;
+  left: 17vw;
+  top: -20vh;
+}
+
+.swiper-slide img {
+  width: 65vw;
+}
+.choose{
+  width: 100vw;
+  top: 15vh;
+}
+.location img,
+.food img,
+.gym img{
+  position: relative;
+  top: -15vh;
+  left: -5vw;
+  width: 7vw;
+}
+.food h2,
+.gym h2,
+.location h2
+{
+  position: absolute;
+  top: -25vh !important;
+  left: 3vw !important;
+}
+.food p,
+.gym p,
+.location p{
+  position: relative;
+  width: 30vw;
+  font-size: 1rem;
+  top: -20vh;
+  left: -5vw;
+}
+.facilities h2{
+  font-size: 2.5rem;
+  font-weight: 500;
+  position: relative;
+  top: 1vh;
+  left: 7vw;
+}
+}
+/* For Tablet View */
+@media screen and (min-device-width: 768px)
+and (max-device-width: 1024px) {
+  .navbar-toggler{
+    position: absolute;
+    right: 15vw;
+  }
+  .topBanner {
+    width: 90vw;
+    height: fit-content;
+  }
+  .form{
+    width: 60vw;
+    margin-bottom: 5vh;
+  }
+
+.check-form-in {
+  position: relative;
+  top: 4vh;
+  left: -8vw;
+  width: 20vw;
+}
+.check-form-out {
+  position: relative;
+  top: 4vh;
+  left: -6.5vw;
+  width: 20vw;
+}
+.checkout-date{
+  position: relative;
+  left: 4vw;
+}
+.adults,
+.children {
+  width: 55vw;
+}
+.images-together{
+  position: relative;
+}
+.portrait-img{
+  position: absolute;
+  width: 18vw;
+  top: -45vh;
+}
+.hotel-img{
+  position: absolute;
+  width: 23vw;
+  top: -40vh;
+  left: 55vw;
+}
+.landscape-img{
+  position: absolute;
+  width: 30vw;
+  top: -25vh;
+  left: 47vw;
+}
+.details{
+  position: relative;
+  top: 9vh;
+  width: 30vw;
+  height: 50.5vh;
+}
+.details button{
+  position: relative;
+  bottom: 0.5vh;
+  font-size: 0.7rem;
+  width: 10vw;
+  height: 4vh;
+  left: 2vw;
+}
+.details h2{
+  font-size: 1.5rem;
+}
+.room-detail{
+  font-size: 0.6rem;
+
+}
+.details-grid{
+  position: relative;
+  left: 0vw;
+  top: -1vh;
+  font-size: 0.7rem;
+}
+.swiper {
+  width: 55vw;
+  height: 51vh;
+  position: relative;
+  left: 7vw;
+  top: -41vh;
+}
+
+.swiper-slide img {
+  width: 65vw;
+}
+.choose{
+  width: 60vw;
+  top: 1vh;
+  left: 5vw;
+}
+.location img{
+  width: 2vw;
+  height: 6vh;
+}
+.location img,
+.food img,
+.gym img{
+  position: relative;
+  top: -20vh;
+  left: 1vw;
+  width: 5vw;
+}
+.food h2,
+.gym h2,
+.location h2
+{
+  position: absolute;
+  font-size: 1.2rem !important;
+  top: -25vh !important;
+  left: 9vw !important;
+}
+.food p,
+.gym p,
+.location p{
+  position: relative;
+  width: 28vw;
+  font-size: 1rem;
+  top: -20vh;
+  left: 1vw;
+}
+.facilities h2{
+  font-size: 2.5rem;
+  font-weight: 500;
+  position: relative;
+  top: -21vh;
+  left: 7vw;
+}
+}
+ 
+/* For Mobile Portrait View */
+/* @media screen and (max-device-width: 480px)
+and (orientation: portrait) {
+  .main-body {
+    width: 200px;
+    height: 200px;
+  }
+}
+  */
+/* For iPhone 4 Portrait or Landscape View */
+/* @media screen and (min-device-width: 320px)
+and (-webkit-min-device-pixel-ratio: 2) {
+  .main-body {
+    width: 400px;
+    height: 400px;
+  }
+}
+  */
+/* For iPhone 5 Portrait or Landscape View */
+/* @media (device-height: 568px) and (device-width: 320px)
+and (-webkit-min-device-pixel-ratio: 2) {
+  .main-body {
+    width: 400px;
+    height: 400px;
+  }
+}
+  */
+/* For iPhone 6 and 6 plus Portrait or Landscape View */
+/* @media (min-device-height: 667px) and (min-device-width: 375px)
+and (-webkit-min-device-pixel-ratio: 3) {
+  .main-body {
+    width: 400px;
+    height: 400px;
+  }
+} */
