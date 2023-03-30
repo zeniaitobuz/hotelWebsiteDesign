@@ -2,7 +2,7 @@ const slides = document.querySelectorAll(".slide");
 const form = document.getElementById("page-banner-form");
 let counter = 0;
 
-async function getData() {
+async function fetchData() {
   const response = await fetch(`http://localhost:200/`)
     .then(function (res) {
       return res.json();
@@ -119,9 +119,9 @@ async function getData() {
     }
   }
 }
-getData();
+fetchData();
 
-async function setData() {
+async function changedata() {
   const response = await fetch(`http://localhost:200/`)
     .then(function (res) {
       return res.json();
@@ -188,15 +188,15 @@ slides.forEach((slide, index) => {
 const previousSlide = () => {
   counter = (counter - 1) % 3;
   if (counter < 0) {
-    counter = 0;
+    counter = counter + 3;
   }
   slideImage();
-  setData();
+  changedata();
 };
 const nextSlide = () => {
   counter = (counter + 1) % 3;
   slideImage();
-  setData();
+  changedata();
 };
 
 const slideImage = () => {

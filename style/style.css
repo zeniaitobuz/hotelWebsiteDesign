@@ -221,7 +221,7 @@ body {
 }
 
 .trip {
-  width: 25%;
+  width: 20%;
   margin: -35% 0 0 85%;
 }
 .ratingComponent {
@@ -324,6 +324,10 @@ body {
 
 .update-section > div > button {
   background-color: #05014a;
+}
+
+footer{
+  padding: 5%;
 }
 
 footer > div {
@@ -446,7 +450,8 @@ footer hr {
     width: 22%;
   }
   .hello-service {
-    width: 35% !important;
+    width: 50% !important;
+    margin-top: 5%;
   }
   .services-banner > div {
     width: 30%;
@@ -457,17 +462,13 @@ footer hr {
     left: 20%;
   }
 
-  .trip {
-    margin-top: -55%;
-  }
-
   .review-name {
     margin: 2% 0 0 2%;
-    width: 75%;
+    width: 85%;
   }
 
   .ratingComponent {
-    margin-left: -72%;
+    margin-left: -42%;
   }
 
   .location-section {
@@ -535,6 +536,14 @@ footer hr {
     right: 0;
   }
 }
+
+@media screen and (min-width: 960px) and (max-width: 1410px){
+  .trip {
+    width: 35%;
+    margin-top: -70%;
+  }
+}
+
 @media screen and (min-width: 767px) and (max-width: 960px) {
   .review-name {
     width: 90%;
@@ -550,14 +559,18 @@ footer hr {
 }
 @media screen and (min-width: 411px) and (max-width: 767px) {
   .review-name {
-    width: 90%;
+    width: 70%;
     margin: -21% 0 0 25%;
   }
   .trip {
     width: 25%;
-    margin-top: -30%;
+    margin: -30% 0 0 75%;
   }
   .ratingComponent {
     margin-left: -75%;
+  }
+  footer{
+    width: fit-content;
+    padding: 9%;
   }
 }
