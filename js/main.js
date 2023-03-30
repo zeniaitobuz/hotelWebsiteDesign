@@ -60,17 +60,17 @@ async function fetchData() {
       document.getElementById("adventure-service-details").textContent =
         response.adventureService.details;
 
-      document.getElementById("room1").src = response.room1;
-      document.getElementById("room2").src = response.room2;
-      document.getElementById("room3").src = response.room3;
+      document.getElementById("room-1").src = response.room1;
+      document.getElementById("room-2").src = response.room2;
+      document.getElementById("room-3").src = response.room3;
 
       document.getElementById("pool-img").src = response.poolImg;
       document.getElementById("forest-img").src = response.forestImg;
 
-      document.getElementById("slide1").src =
+      document.getElementById("slide-1").src =
         response.showRooms.standardRoom.url;
-      document.getElementById("slide2").src = response.showRooms.suite.url;
-      document.getElementById("slide3").src =
+      document.getElementById("slide-2").src = response.showRooms.suite.url;
+      document.getElementById("slide-3").src =
         response.showRooms.presidentSuite.url;
 
       document.getElementById("selena-img").src = response.reviews.selena.url;
