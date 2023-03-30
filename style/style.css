@@ -9,6 +9,21 @@ body {
   font-weight: 400;
 }
 
+.bluish-grey-color {
+  color: #4a4867;
+}
+.deep-blue-color {
+  color: #05014a !important;
+}
+
+.deep-blue-background-color {
+  background-color: #05014a !important;
+}
+
+.grey-color {
+  color: #666362;
+}
+
 .alternate-style,
 #alternate-style {
   font-family: "Montserrat", sans-serif;
@@ -24,20 +39,6 @@ body {
 }
 .navbar-subheading {
   font-size: 0.5rem;
-}
-.bluish-grey-color {
-  color: #4a4867;
-}
-.deep-blue-color {
-  color: #05014a !important;
-}
-
-.deep-blue-background-color {
-  background-color: #05014a !important;
-}
-
-.grey-color {
-  color: #666362;
 }
 
 .nav-item a {
@@ -56,7 +57,6 @@ body {
 }
 
 .page-banner-form-buttom {
-  background-color: #05014a;
   color: #ffffff;
 }
 
@@ -115,13 +115,11 @@ body {
   margin-bottom: 5rem;
 }
 
-
 .show-rooms {
   flex-direction: column;
 }
 
 .show-room-details {
-  background-color: #05014a;
   color: #ffffff;
   padding: 1rem;
 }
@@ -182,7 +180,6 @@ body {
 }
 
 .activity-pool-smile-details {
-  background-color: #05014a;
   padding: 1rem;
   color: #ffffff;
 }
@@ -307,10 +304,6 @@ body {
   align-items: center;
 }
 
-.travel-section-details button {
-  background-color: #05014a;
-}
-
 .update-section > div {
   border: 0.5px solid #666362;
   padding: 0.7rem;
@@ -320,10 +313,6 @@ body {
 .update-section > div > input {
   border: none;
   width: 80%;
-}
-
-.update-section > div > button {
-  background-color: #05014a;
 }
 
 footer {
@@ -465,7 +454,7 @@ footer hr {
   }
 
   .ratingComponent {
-    margin-left: -42%;
+    margin-left: -70%;
   }
 
   .location-section {
@@ -539,7 +528,6 @@ footer hr {
     width: 35%;
     margin-top: -70%;
   }
-
 }
 
 @media screen and (min-width: 961px) and (max-width: 991px) {
@@ -561,21 +549,6 @@ footer hr {
   .ratingComponent {
     margin-left: -35%;
   }
-  /* .room-1 {
-    top: 1rem;
-    width: 80%;
-  }
-
-  .room-2 {
-    width: 95%;
-    top: 13rem;
-    left: -1rem;
-  }
-
-  .room-3 {
-    width: 100%;
-    top: 23rem;
-  } */
 }
 @media screen and (min-width: 411px) and (max-width: 767px) {
   .review-name {
@@ -589,7 +562,7 @@ footer hr {
   .ratingComponent {
     margin-left: -75%;
   }
- 
+
   footer {
     width: fit-content;
     padding: 9%;

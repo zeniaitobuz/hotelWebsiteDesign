@@ -28,25 +28,37 @@ async function fetchData() {
       document.getElementById("yoga-img").src = response.chooseHotel.yogaUrl;
       document.getElementById("loc-img").src = response.chooseHotel.locUrl;
 
-      document.getElementById("wellnessService").src =
+      document.getElementById("wellness-service").src =
         response.wellnessService.url;
-      document.getElementById("wellnessServiceHeading").textContent =
+      document.getElementById("wellness-service-heading").textContent =
         response.wellnessService.heading;
-      document.getElementById("wellnessServiceSubHeading").textContent =
+      document.getElementById("wellness-service-subheading").textContent =
         response.wellnessService.subHeading;
-      document.getElementById("wellnessServiceDetails").textContent =
+      document.getElementById("wellness-service-details").textContent =
         response.wellnessService.details;
-      document.getElementById("giftCardService").src =
+      document.getElementById("gift-card-service").src =
         response.giftCardService.url;
-      document.getElementById("giftCardServiceHeading").textContent =
+      document.getElementById("gift-card-service-heading").textContent =
         response.giftCardService.heading;
-      document.getElementById("giftCardServiceSubHeading").textContent =
+      document.getElementById("gift-card-service-subheading").textContent =
         response.giftCardService.subHeading;
-      document.getElementById("giftCardServiceDetails").textContent =
+      document.getElementById("gift-card-service-details").textContent =
         response.giftCardService.details;
-      document.getElementById("spaService").src = response.spaService.url;
-      document.getElementById("spaServiceHeading").textContent =
+      document.getElementById("spa-service").src = response.spaService.url;
+      document.getElementById("spa-service-heading").textContent =
         response.spaService.heading;
+      document.getElementById("spa-service-subheading").textContent =
+        response.spaService.subHeading;
+      document.getElementById("spa-service-details").textContent =
+        response.spaService.details;
+      document.getElementById("adventure-service").src =
+        response.adventureService.url;
+      document.getElementById("adventure-service-heading").textContent =
+        response.adventureService.heading;
+      document.getElementById("adventure-service-subheading").textContent =
+        response.adventureService.subHeading;
+      document.getElementById("adventure-service-details").textContent =
+        response.adventureService.details;
 
       document.getElementById("room1").src = response.room1;
       document.getElementById("room2").src = response.room2;
@@ -55,18 +67,6 @@ async function fetchData() {
       document.getElementById("pool-img").src = response.poolImg;
       document.getElementById("forest-img").src = response.forestImg;
 
-      document.getElementById("spaServiceSubHeading").textContent =
-        response.spaService.subHeading;
-      document.getElementById("spaServiceDetails").textContent =
-        response.spaService.details;
-      document.getElementById("adventureService").src =
-        response.adventureService.url;
-      document.getElementById("adventureServiceHeading").textContent =
-        response.adventureService.heading;
-      document.getElementById("adventureServiceSubHeading").textContent =
-        response.adventureService.subHeading;
-      document.getElementById("adventureServiceDetails").textContent =
-        response.adventureService.details;
       document.getElementById("slide1").src =
         response.showRooms.standardRoom.url;
       document.getElementById("slide2").src = response.showRooms.suite.url;
@@ -133,11 +133,11 @@ async function changedata() {
     alert(response.error.message);
   } else {
     if (counter === 0) {
-      document.getElementById("showRoomHeading").textContent =
+      document.getElementById("show-room-heading").textContent =
         response.showRooms.standardRoom.heading;
-      document.getElementById("showRoomPrice").textContent =
+      document.getElementById("show-room-price").textContent =
         response.showRooms.standardRoom.price;
-      document.getElementById("showRoomDetails").textContent =
+      document.getElementById("show-room-details").textContent =
         response.showRooms.standardRoom.details;
       document.getElementById("bed-size").textContent =
         response.showRooms.standardRoom.bedSize;
@@ -148,11 +148,11 @@ async function changedata() {
       document.getElementById("hotel-view").textContent =
         response.showRooms.standardRoom.hotelView;
     } else if (counter === 1) {
-      document.getElementById("showRoomHeading").textContent =
+      document.getElementById("show-room-heading").textContent =
         response.showRooms.suite.heading;
-      document.getElementById("showRoomPrice").textContent =
+      document.getElementById("show-room-price").textContent =
         response.showRooms.suite.price;
-      document.getElementById("showRoomDetails").textContent =
+      document.getElementById("show-room-details").textContent =
         response.showRooms.suite.details;
       document.getElementById("bed-size").textContent =
         response.showRooms.suite.bedSize;
@@ -163,11 +163,11 @@ async function changedata() {
       document.getElementById("hotel-view").textContent =
         response.showRooms.suite.hotelView;
     } else if (counter === 2) {
-      document.getElementById("showRoomHeading").textContent =
+      document.getElementById("show-room-heading").textContent =
         response.showRooms.presidentSuite.heading;
-      document.getElementById("showRoomPrice").textContent =
+      document.getElementById("show-room-price").textContent =
         response.showRooms.presidentSuite.price;
-      document.getElementById("showRoomDetails").textContent =
+      document.getElementById("show-room-details").textContent =
         response.showRooms.presidentSuite.details;
       document.getElementById("bed-size").textContent =
         response.showRooms.presidentSuite.bedSize;
