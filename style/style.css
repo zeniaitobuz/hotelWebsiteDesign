@@ -9,14 +9,12 @@ body {
   font-weight: 400;
 }
 
-.alternateStyle {
+.alternate-style,
+#alternate-style {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
 }
-#alternateStyle {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-}
+
 .pink-text {
   color: rgb(231, 157, 155);
 }
@@ -27,7 +25,9 @@ body {
 .navbar-subheading {
   font-size: 0.5rem;
 }
-
+.bluish-grey-color {
+  color: #1e1d32;
+}
 .deep-blue-color {
   color: #05014a !important;
 }
@@ -50,7 +50,7 @@ body {
 
 .page-form {
   background: #ffffff;
-  width: 70%;
+  width: 80%;
   height: fit-content;
   margin-right: 5%;
 }
@@ -84,33 +84,32 @@ body {
 }
 
 .form-date-inputs {
-  width: 40%;
+  width: 35%;
+  font-size: smaller;
 }
 
-.homestay-adds-images {
+.hotel-images {
   height: 60vh;
 }
 
-.homestay1,
-.homestay2,
-.homestay3 {
-  width: 80%;
-}
-
-.homestay1 {
+.room-1 {
   z-index: 1;
+  top: -8vh;
+  width: 48vw;
 }
 
-.homestay3 {
-  top: 18rem;
-  margin-left: 2rem;
+.room-3 {
+  width: 58vw;
+  top: 17rem;
+  margin-left: -3.5rem;
   z-index: 3;
   padding-left: 4rem;
 }
 
-.homestay2 {
-  top: 12rem;
-  left: 2rem;
+.room-2 {
+  width: 58vw;
+  top: 7rem;
+  left: -3.5rem;
   z-index: 2;
   padding-left: 4rem;
   padding-bottom: 4rem;
@@ -174,21 +173,21 @@ body {
   flex-direction: column;
 }
 
-.activity-pool-time {
+.activity-pool-smile {
   flex-direction: column;
 }
 
-.activity-pool-time img {
+.activity-pool-smile img {
   height: 100%;
 }
 
-.activity-pool-time-details {
+.activity-pool-smile-details {
   background-color: #05014a;
   padding: 1rem;
   color: #ffffff;
 }
 
-.activity-pool-time-details button {
+.activity-pool-smile-details button {
   border: 1px solid white;
 }
 
@@ -198,7 +197,6 @@ body {
 }
 
 .services-banner {
-  background-image: url("../images/services/banner.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -215,7 +213,56 @@ body {
 }
 
 .reviews {
-  background-color: #fffaf6;
+  background-color: #fefaf6;
+}
+.review-name {
+  width: 65%;
+  margin: -30% 0 0 20%;
+}
+
+.trip {
+  width: 25%;
+  margin: -35% 0 0 85%;
+}
+.ratingComponent {
+  margin-left: -65%;
+  text-align: center;
+}
+
+.ratingComponent__rating {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.ratingComponent__dot {
+  background-color: transparent;
+  border: solid 2px #06ca78;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin: 0 5px 0 0;
+}
+.ratingComponent__dot--filled {
+  background-color: #06ca78;
+}
+.ratingComponent__dot--halfFilled {
+  background-color: #06ca78;
+  width: 9px;
+  border-radius: 10px 0 0 10px;
+  margin-right: 15px;
+}
+.ratingComponent__dot--halfFilled::after {
+  content: "";
+  display: block;
+  position: relative;
+  left: 7px;
+  top: -2px;
+  width: 8px;
+  height: 16px;
+  border-radius: 0 10px 10px 0;
+  border: solid 2px #06ca78;
 }
 
 .card {
@@ -306,6 +353,7 @@ footer hr {
   display: none !important;
 }
 
+/* Responsive for desktop screen */
 @media screen and (min-width: 960px) {
   footer {
     padding: 0 10rem;
@@ -335,30 +383,36 @@ footer hr {
 
   .form-date-inputs {
     width: 48%;
+    font-size: medium;
+  }
+
+  #check-in,
+  #check-out {
+    width: 30vw;
   }
 
   .page-banner-right-arrow {
     width: 5%;
   }
 
-  .homestay-adds-details {
+  .hotel-details {
     padding: 10%;
   }
 
-  .homestay1 {
+  .room-1 {
     top: -2rem;
     left: 2rem;
     width: 50%;
     height: 45vh;
   }
 
-  .homestay2 {
+  .room-2 {
     width: 50%;
     top: 11rem;
     left: 15rem;
   }
 
-  .homestay3 {
+  .room-3 {
     width: 55%;
     top: 20rem;
     left: 3rem;
@@ -372,12 +426,19 @@ footer hr {
     flex-direction: row;
   }
 
-  .activity-pool-time {
+  .activity-pool-smile {
     flex-direction: row;
+    width: 100%;
   }
 
-  .activity-pool-time-details {
-    width: 60vw;
+  .activity-pool-smile-img {
+    width: 50%;
+  }
+  .activity-pool-smile img {
+    width: 100%;
+  }
+  .activity-pool-smile-details {
+    width: 50%;
     padding: 5%;
   }
 
@@ -394,6 +455,19 @@ footer hr {
     padding: 4rem !important;
     top: 1.5rem;
     left: 20%;
+  }
+
+  .trip {
+    margin-top: -55%;
+  }
+
+  .review-name {
+    margin: 2% 0 0 2%;
+    width: 75%;
+  }
+
+  .ratingComponent {
+    margin-left: -72%;
   }
 
   .location-section {
@@ -459,5 +533,31 @@ footer hr {
   .select-language-footer > div {
     display: flex !important;
     right: 0;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 960px) {
+  .review-name {
+    width: 90%;
+    margin: -10% 0 0 -11%;
+  }
+  .trip {
+    width: 45%;
+    margin-top: -150%;
+  }
+  .ratingComponent {
+    margin-left: -35%;
+  }
+}
+@media screen and (min-width: 411px) and (max-width: 767px) {
+  .review-name {
+    width: 90%;
+    margin: -21% 0 0 25%;
+  }
+  .trip {
+    width: 25%;
+    margin-top: -30%;
+  }
+  .ratingComponent {
+    margin-left: -75%;
   }
 }

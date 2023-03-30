@@ -3,7 +3,7 @@ const form = document.getElementById("page-banner-form");
 let counter = 0;
 
 async function getData() {
-  const response = await fetch(`http://localhost:5000/`)
+  const response = await fetch(`http://localhost:200/`)
     .then(function (res) {
       return res.json();
     })
@@ -17,6 +17,16 @@ async function getData() {
       document.getElementById(
         "page-banner"
       ).style.backgroundImage = `url(${response.topBanner})`;
+
+      document.getElementById("hotel-heading").textContent =
+        response.hotelDetails.heading;
+      document.getElementById("hotel-details-text").textContent =
+        response.hotelDetails.details;
+      document.getElementById("signature-img").src = response.hotelDetails.url;
+
+      document.getElementById("food-img").src = response.chooseHotel.foodUrl;
+      document.getElementById("yoga-img").src = response.chooseHotel.yogaUrl;
+      document.getElementById("loc-img").src = response.chooseHotel.locUrl;
 
       document.getElementById("wellnessService").src =
         response.wellnessService.url;
@@ -42,6 +52,9 @@ async function getData() {
       document.getElementById("room2").src = response.room2;
       document.getElementById("room3").src = response.room3;
 
+      document.getElementById("pool-img").src = response.poolImg;
+      document.getElementById("forest-img").src = response.forestImg;
+
       document.getElementById("spaServiceSubHeading").textContent =
         response.spaService.subHeading;
       document.getElementById("spaServiceDetails").textContent =
@@ -56,9 +69,51 @@ async function getData() {
         response.adventureService.details;
       document.getElementById("slide1").src =
         response.showRooms.standardRoom.url;
-      document.getElementById("slide2").src = response.showRooms.deluxeRoom.url;
+      document.getElementById("slide2").src = response.showRooms.suite.url;
       document.getElementById("slide3").src =
-        response.showRooms.superDeluxeRoom.url;
+        response.showRooms.presidentSuite.url;
+
+      document.getElementById("selena-img").src = response.reviews.selena.url;
+      document.getElementById("selena-name").textContent =
+        response.reviews.selena.name;
+      document.getElementById("selena-date").textContent =
+        response.reviews.selena.date;
+      document.getElementById("selena-comment").textContent =
+        response.reviews.selena.comment;
+      document.getElementById("selena-review").textContent =
+        response.reviews.selena.review;
+
+      document.getElementById("esther-img").src = response.reviews.esther.url;
+      document.getElementById("esther-name").textContent =
+        response.reviews.esther.name;
+      document.getElementById("esther-date").textContent =
+        response.reviews.esther.date;
+      document.getElementById("esther-comment").textContent =
+        response.reviews.esther.comment;
+      document.getElementById("esther-review").textContent =
+        response.reviews.esther.review;
+
+      document.getElementById("jane-img").src = response.reviews.jane.url;
+      document.getElementById("jane-name").textContent =
+        response.reviews.jane.name;
+      document.getElementById("jane-date").textContent =
+        response.reviews.jane.date;
+      document.getElementById("jane-comment").textContent =
+        response.reviews.jane.comment;
+      document.getElementById("jane-review").textContent =
+        response.reviews.jane.review;
+
+      document.getElementById("trip-img-1").src = response.tripImg;
+      document.getElementById("trip-img-2").src = response.tripImg;
+      document.getElementById("trip-img-3").src = response.tripImg;
+
+      document.getElementById("travel-1").src = response.travelImg1;
+      document.getElementById("travel-2").src = response.travelImg2;
+      document.getElementById("travel-3").src = response.travelImg3;
+
+      document.getElementById(
+        "services-img"
+      ).style.backgroundImage = `url(${response.helloImg})`;
     } catch (err) {
       console.log(err);
     }
@@ -67,7 +122,7 @@ async function getData() {
 getData();
 
 async function setData() {
-  const response = await fetch(`http://localhost:5000/`)
+  const response = await fetch(`http://localhost:200/`)
     .then(function (res) {
       return res.json();
     })
@@ -94,34 +149,34 @@ async function setData() {
         response.showRooms.standardRoom.hotelView;
     } else if (counter === 1) {
       document.getElementById("showRoomHeading").textContent =
-        response.showRooms.deluxeRoom.heading;
+        response.showRooms.suite.heading;
       document.getElementById("showRoomPrice").textContent =
-        response.showRooms.deluxeRoom.price;
+        response.showRooms.suite.price;
       document.getElementById("showRoomDetails").textContent =
-        response.showRooms.deluxeRoom.details;
+        response.showRooms.suite.details;
       document.getElementById("bed-size").textContent =
-        response.showRooms.deluxeRoom.bedSize;
+        response.showRooms.suite.bedSize;
       document.getElementById("capacity").textContent =
-        response.showRooms.deluxeRoom.capacity;
+        response.showRooms.suite.capacity;
       document.getElementById("room-size").textContent =
-        response.showRooms.deluxeRoom.roomSize;
+        response.showRooms.suite.roomSize;
       document.getElementById("hotel-view").textContent =
-        response.showRooms.deluxeRoom.hotelView;
+        response.showRooms.suite.hotelView;
     } else if (counter === 2) {
       document.getElementById("showRoomHeading").textContent =
-        response.showRooms.superDeluxeRoom.heading;
+        response.showRooms.presidentSuite.heading;
       document.getElementById("showRoomPrice").textContent =
-        response.showRooms.superDeluxeRoom.price;
+        response.showRooms.presidentSuite.price;
       document.getElementById("showRoomDetails").textContent =
-        response.showRooms.superDeluxeRoom.details;
+        response.showRooms.presidentSuite.details;
       document.getElementById("bed-size").textContent =
-        response.showRooms.superDeluxeRoom.bedSize;
+        response.showRooms.presidentSuite.bedSize;
       document.getElementById("capacity").textContent =
-        response.showRooms.superDeluxeRoom.capacity;
+        response.showRooms.presidentSuite.capacity;
       document.getElementById("room-size").textContent =
-        response.showRooms.superDeluxeRoom.roomSize;
+        response.showRooms.presidentSuite.roomSize;
       document.getElementById("hotel-view").textContent =
-        response.showRooms.superDeluxeRoom.hotelView;
+        response.showRooms.presidentSuite.hotelView;
     }
   }
 }
@@ -150,10 +205,23 @@ const slideImage = () => {
   });
 };
 
-// function formHandler() {
-//   let checkIn = document.getElementById("check-in").value;
-//   let checkOut = document.getElementById("check-out").value;
-//   let adults = document.getElementById("adults").value;
-//   let children = document.getElementById("children").value;
-//   console.log(checkIn, checkOut, adults, children);
-// }
+function formDataSender(event) {
+  event.preventDefault();
+  let formDataEntered = {
+    checkIn: document.getElementById("check-in").value,
+    checkOut: document.getElementById("check-out").value,
+    adults: document.getElementById("adults").value,
+    children: document.getElementById("children").value,
+  };
+  fetch("http://localhost:200/", {
+    method: "POST",
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+    body: JSON.stringify(formDataEntered),
+  });
+  document.getElementById("check-in").value = "";
+  document.getElementById("check-out").value = "";
+  document.getElementById("adults").value = "";
+  document.getElementById("children").value = "";
+}

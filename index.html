@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mikalto</title>
+    <title>Mikalto Website</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -28,13 +28,13 @@
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
           <div class="p-2 d-flex flex-column align-items-center">
-            <a class="text-decoration-none display-6 deep-blue-color" href="#"
+            <a class="text-decoration-none display-5 deep-blue-color" href="#"
               >MIKALTO</a
             >
             <a
-              class="text-decoration-none navbar-subheading deep-blue-color"
+              class="text-decoration-none fs-6 navbar-subheading deep-blue-color"
               href="#"
-              id="alternateStyle"
+              id="alternate-style"
               >HOTELS & RESORTS</a
             >
           </div>
@@ -85,8 +85,14 @@
             </div>
             <div class="navbar-nav ms-auto">
               <div class="d-flex justify-content-center gap-2 navbar-icons">
-                <select class="border-0" name="" id="alternateStyle">
+                <select
+                  class="border-0 deep-blue-color"
+                  name=""
+                  id="alternate-style"
+                >
                   <option value="EN">EN</option>
+                  <option value="EN1">EN1</option>
+                  <option value="EN2">EN2</option>
                 </select>
                 <img
                   src="/images/navigationBar/navigationBarShopIcon.png"
@@ -108,7 +114,7 @@
           <h4 class="position-relative text-left display-4 text-light">
             Enjoy your dream vaccation
           </h4>
-          <p class="text-light" id="alternateStyle">
+          <p class="text-light" id="alternate-style">
             Quite and endlessly beautiful hideaway
           </p>
           <div
@@ -117,7 +123,7 @@
             <button class="page-banner-heading-button">
               <a
                 class="text-decoration-none text-dark"
-                id="alternateStyle"
+                id="alternate-style"
                 href="#"
                 >About Us</a
               >
@@ -125,28 +131,28 @@
             <div class="d-flex flex-row gap-2">
               <a
                 class="text-decoration-none text-light"
-                id="alternateStyle"
+                id="alternate-style"
                 href="#"
-                >View Homestays →</a
+                >View Homestay →</a
               >
             </div>
           </div>
         </div>
 
         <form
-          onsubmit="formHandler()"
+          onsubmit="formDataSender(event)"
           id="page-banner-form"
           class="position-relative page-form p-4 d-flex flex-column gap-3 align-items-center justify-content-center"
         >
           <p class="fs-1 text-left deep-blue-color mb-0">Search Room</p>
-          <p id="alternateStyle">Get the latest on our COVID-19 response</p>
+          <p id="alternate-style">Get the latest on our COVID-19 response</p>
           <div
             class="d-flex flex-row gap-2 justify-content-center gap-2"
-            id="alternateStyle"
+            id="alternate-style"
           >
             <div class="form-date-inputs d-flex flex-column gap-2">
               <div class="d-flex flex-row">
-                <label for="" class="deep-blue-color">Checkin*</label>
+                <label for="" class="deep-blue-color">Checkin *</label>
               </div>
               <input
                 id="check-in"
@@ -158,7 +164,7 @@
             </div>
             <div class="form-date-inputs d-flex flex-column gap-2">
               <div class="d-flex flex-row">
-                <label for="" class="deep-blue-color">Checkout*</label>
+                <label for="" class="deep-blue-color">Checkout *</label>
               </div>
               <input
                 id="check-out"
@@ -170,7 +176,7 @@
             </div>
           </div>
           <div class="w-100 d-flex flex-column">
-            <label id="alternateStyle" for="" class="deep-blue-color"
+            <label id="alternate-style" for="" class="deep-blue-color"
               >Adults</label
             >
             <select name="" id="adults" class="border-0 border-bottom">
@@ -187,7 +193,7 @@
             </select>
           </div>
           <div class="w-100 d-flex flex-column">
-            <label id="alternateStyle" for="" class="deep-blue-color"
+            <label id="alternate-style" for="" class="deep-blue-color"
               >Children</label
             >
             <select name="" id="children" class="border-0 border-bottom">
@@ -200,13 +206,13 @@
               <option value="7">7</option>
               <option value="8">8</option>
               <option value="9">9</option>
-              <option value="10">10</option>
+              <option value="0">0</option>
             </select>
           </div>
           <button
             type="submit"
             class="page-banner-form-buttom w-100 p-2 mb-4"
-            id="alternateStyle"
+            id="alternate-style"
           >
             Check availability
           </button>
@@ -216,26 +222,17 @@
     <section
       class="p-3 d-flex flex-wrap justify-content-around align-items-center position-relative homestay-adds"
     >
-      <div class="d-flex gap-4 flex-column w-50 homestay-adds-details">
+      <div class="d-flex gap-4 flex-column w-50 hotel-details">
         <p class="deep-blue-color">WELCOME TO</p>
-        <p class="display-3">The Mikalto Luxury & Comfort Homestay</p>
-        <p id="alternateStyle">
-          Welcome to our five-star hotel in Puerto de la Cruz's old town. A
-          marvellous combination of architecture, design and contemporary art.
-          32 room and 10 uniquely different suites ensure our guests' stay is
-          extra special.
-        </p>
-        <img class="w-50" src="/images/homestays/sign.jpg" alt="signature" />
+        <p id="hotel-heading" class="display-3"></p>
+        <p id="hotel-details-text" class="alternate-style"></p>
+        <img id="signature-img" class="w-50" src="" alt="signature" />
       </div>
-      <div class="position-relative w-50 homestay-adds-images">
+      <div class="position-relative w-50 hotel-images">
         <div class="images">
-          <img class="homestay1 position-absolute" id="room1" alt="hotel-img" />
-          <img
-            class="homestay3 position-relative"
-            id="room2"
-            alt="homestay-img"
-          />
-          <img class="homestay2 position-absolute" id="room3" alt="hotel-img" />
+          <img class="room-1 position-absolute" id="room1" alt="hotel-img" />
+          <img class="room-3 position-relative" id="room2" alt="homestay-img" />
+          <img class="room-2 position-absolute" id="room3" alt="hotel-img" />
         </div>
       </div>
     </section>
@@ -244,11 +241,11 @@
         <div class="w-75 d-flex flex-column justify-content-start">
           <p class="pink-text">ELEGANCE AND COMFORT</p>
           <p id="showRoomHeading" class="display-4">STANDARD ROOM</p>
-          <p class="alternateStyle" id="showRoomPrice">From $150/night</p>
-          <p class="alternateStyle" id="showRoomDetails">
+          <p class="alternate-style" id="showRoomPrice">From $150/night</p>
+          <p class="alternate-style" id="showRoomDetails">
             Comfortable rooms at comfortable pricings.
           </p>
-          <div class="container" id="alternateStyle">
+          <div class="container" id="alternate-style">
             <div class="row">
               <div class="col">Bed:</div>
               <div id="bed-size" class="col">Queen Size Bed</div>
@@ -279,14 +276,14 @@
         <button
           class="p-4 show-room-pictures-previous-button"
           onclick="previousSlide()"
-          id="alternateStyle"
+          id="alternate-style"
         >
           ◀
         </button>
         <button
           class="p-4 show-room-pictures-next-button"
           onclick="nextSlide()"
-          id="alternateStyle"
+          id="alternate-style"
         >
           ▶
         </button>
@@ -299,11 +296,7 @@
           class="d-flex section-why-choose-our-hostel gap-4 justify-content-center align-item-center"
         >
           <div class="p-4">
-            <img
-              class="w-25"
-              src="/images/ourHotel/uniqueCuisine.jpg"
-              alt="logo"
-            />
+            <img id="food-img" class="w-25" src="" alt="food-logo" />
             <div class="d-flex flex-column">
               <p class="fs-3">Unique cuisine</p>
               <p>
@@ -314,7 +307,7 @@
             </div>
           </div>
           <div class="p-4">
-            <img class="w-25" src="/images/ourHotel/yoga.jpg" alt="logo" />
+            <img id="yoga-img" class="w-25" src="" alt="yoga-logo" />
             <div class="d-flex flex-column">
               <p class="fs-3">Yoga & Gym</p>
               <p>
@@ -325,7 +318,7 @@
             </div>
           </div>
           <div class="p-4">
-            <img class="w-25" src="/images/ourHotel/location.jpg" alt="logo" />
+            <img id="loc-img" class="w-25" src="" alt="location-logo" />
             <div class="d-flex flex-column">
               <p class="fs-3">Perfect Location</p>
               <p>
@@ -339,11 +332,11 @@
       </div>
     </section>
     <section class="activities d-flex flex-column">
-      <div class="d-flex activity-pool-time">
-        <div class="activity-pool-time-details">
-          <p id="alternateStyle " class="pink-text">OTHER ACTIVITIES</p>
+      <div class="d-flex activity-pool-smile">
+        <div class="activity-pool-smile-details">
+          <p id="alternate-style " class="pink-text">OTHER ACTIVITIES</p>
           <p class="display-6">Give yourself a smile- Smile & Wellness</p>
-          <p id="alternateStyle fs-6 ">
+          <p id="alternate-style fs-6 ">
             Proin nec leo vel metus faucibus vehicula. Donec vulputate in magna
             eget egestas. Aliquam ac facilisis ante, sit amet tincidunt ante.
             Fusce dolor sapien, sodales at velit non, lobortis volutpat ante.
@@ -353,26 +346,18 @@
           </p>
           <a class="text-decoration-none text-light" href="#">Explore More </a>
         </div>
-        <div>
-          <img
-            class="w-100"
-            src="https://img.staticmb.com/mbcontent//images/uploads/2022/7/swimming-pool.jpg"
-            alt="pool"
-          />
+        <div class="activity-pool-smile-img">
+          <img id="pool-img" class="w-100" src="" alt="pool" />
         </div>
       </div>
-      <div class="d-flex activity-pool-time">
-        <div>
-          <img
-            class="w-100"
-            src="https://www.taleof2backpackers.com/wp-content/uploads/2022/09/Little-Forest-Homestay-at-Mim-Tea-Estate.jpg"
-            alt="forest-homestay"
-          />
+      <div class="d-flex activity-pool-smile">
+        <div class="activity-pool-smile-img">
+          <img id="forest-img" class="w-100" src="" alt="forest-homestay" />
         </div>
-        <div class="activity-pool-time-details">
-          <p id="alternateStyle " class="pink-text">RECONNECT WITH NATURE</p>
-          <p class="display-6">Experience a truly unforgettable holidy</p>
-          <p id="alternateStyle fs-6">
+        <div class="activity-pool-smile-details">
+          <p id="alternate-style " class="pink-text">RECONNECT WITH NATURE</p>
+          <p class="display-6">Experience a truly unforgettable holiday</p>
+          <p id="alternate-style fs-6">
             The wilderness and authenticity of this tiny village nestled between
             steep mountain cliffs and miles and miles of beautiful beaches drew
             foreign visitors like a magnet.
@@ -394,7 +379,7 @@
     <section
       class="py-5 services-section d-flex flex-column justify-content-center align-item-center"
     >
-      <p class="text-center" id="alternateStyle">EXPERIENCE MATTERS</p>
+      <p class="text-center" id="alternate-style">EXPERIENCE MATTERS</p>
       <p class="display-6 text-center">
         Escape from the world see the experience before you feel it. <br />
         Discover the luxury of Hotel Mikalto
@@ -404,7 +389,7 @@
           <img class="w-100" id="wellnessService" alt="wellness" />
           <p id="wellnessServiceHeading" class="deep-blue-color"></p>
           <p id="wellnessServiceSubHeading" class="fs-4"></p>
-          <p id="wellnessServiceDetails"></p>
+          <p id="wellnessServiceDetails" class="bluish-grey-color"></p>
           <a class="text-decoration-none deep-blue-color" href="#"
             >Discover more →</a
           >
@@ -413,7 +398,7 @@
           <img class="w-100" id="giftCardService" alt="gift-card" />
           <p id="giftCardServiceHeading" class="deep-blue-color"></p>
           <p id="giftCardServiceSubHeading" class="fs-4"></p>
-          <p id="giftCardServiceDetails"></p>
+          <p id="giftCardServiceDetails" class="bluish-grey-color"></p>
           <a class="text-decoration-none deep-blue-color" href="#"
             >Discover more →</a
           >
@@ -422,7 +407,7 @@
           <img class="w-100" id="spaService" alt="spa" />
           <p id="spaServiceHeading" class="deep-blue-color"></p>
           <p id="spaServiceSubHeading" class="fs-4"></p>
-          <p id="spaServiceDetails"></p>
+          <p id="spaServiceDetails" class="bluish-grey-color"></p>
           <a class="text-decoration-none deep-blue-color" href="#"
             >Discover more →</a
           >
@@ -447,6 +432,7 @@
         </button>
       </div>
       <div
+        id="services-img"
         class="services-banner position-relative d-flex justify-content-center align-item-center"
       >
         <div class="d-flex flex-column hello-service p-4">
@@ -464,44 +450,142 @@
       </div>
     </section>
     <section class="reviews">
-      <div class="container mt-5 mb-3">
+      <div class="container mt-1 mb-3">
         <div class="row">
           <div class="col-md-4">
             <div class="card p-3 mb-2">
               <div class="d-flex flex-column">
-                <img src="/images/reviews/selenaMayer.jpg" alt="review" />
-                <p>Wonderful new year trip</p>
-                <p>
-                  One of the best hotels i've ever stayed in. The stuff are very
-                  friendly and helpful, they were so helpful it made me feel
-                  bad. it includes use of the spa, wounderful, it has a...
-                </p>
+                <div class="card" style="max-width: 540px">
+                  <div class="row g-0">
+                    <div class="col-md-4 w-25">
+                      <img
+                        id="selena-img"
+                        src=""
+                        class="img-fluid rounded-start"
+                        alt="logo"
+                      />
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body review-name">
+                        <h5 id="selena-name" class="card-title"></h5>
+                        <p id="selena-date" class="card-text grey-color"></p>
+                      </div>
+                      <img id="trip-img-1" class="trip" src="" alt="logo" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ratingComponent">
+                  <div class="ratingComponent__rating">
+                    <div
+                      class="ratingComponent__dot ratingComponent__dot--filled"
+                    ></div>
+                    <div
+                      class="ratingComponent__dot ratingComponent__dot--filled"
+                    ></div>
+                    <div
+                      class="ratingComponent__dot ratingComponent__dot--filled"
+                    ></div>
+                    <div
+                      class="ratingComponent__dot ratingComponent__dot--filled"
+                    ></div>
+                    <div
+                      class="ratingComponent__dot ratingComponent__dot--filled"
+                    ></div>
+                  </div>
+                </div>
+                <p id="selena-comment" class="fw-bold"></p>
+                <p id="selena-review"></p>
               </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="card p-3 mb-2">
               <div class="d-flex flex-column">
-                <img src="/images/reviews/estherHoward.jpg" alt="review" />
-                <p>Recommended</p>
-                <p>
-                  Great resort, professional staffs". It turns out that you're
-                  searching for paradise and you have it hear, nearby. Thanks
-                  for the warmth, you are fantastic.
-                </p>
+                <div class="card" style="max-width: 540px">
+                  <div class="row g-0">
+                    <div class="col-md-4 w-25">
+                      <img
+                        id="esther-img"
+                        src=""
+                        class="img-fluid rounded-start"
+                        alt="logo"
+                      />
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body review-name">
+                        <h5 id="esther-name" class="card-title"></h5>
+                        <p id="esther-date" class="card-text grey-color"></p>
+                      </div>
+                      <img id="trip-img-2" class="trip" src="" alt="logo" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ratingComponent">
+                  <div class="ratingComponent__rating">
+                    <div class="ratingComponent__dot"></div>
+                    <div class="ratingComponent__dot"></div>
+                    <div
+                      class="ratingComponent__dot ratingComponent__dot--halfFilled"
+                    ></div>
+                    <div
+                      class="ratingComponent__dot ratingComponent__dot--filled"
+                    ></div>
+                    <div
+                      class="ratingComponent__dot ratingComponent__dot--filled"
+                    ></div>
+                  </div>
+                </div>
+                <p id="esther-comment" class="fw-bold"></p>
+                <p id="esther-review"></p>
               </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="card p-3 mb-2">
               <div class="d-flex flex-column">
-                <img src="/images/reviews/janeScopper.jpg" alt="review" />
-                <p>All good</p>
-                <p>
-                  I love the Resort and its environment. Mikalto is incredibly
-                  dedicated, knowledgeable, and helpful. The finished product
-                  was beautiful every penny...
-                </p>
+                <div class="card" style="max-width: 540px">
+                  <div class="row g-0">
+                    <div class="col-md-4 w-25">
+                      <img
+                        id="jane-img"
+                        src=""
+                        class="img-fluid rounded-start"
+                        alt="logo"
+                      />
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body review-name">
+                        <h5 id="jane-name" class="card-title"></h5>
+                        <p id="jane-date" class="card-text grey-color"></p>
+                      </div>
+                      <img id="trip-img-3" class="trip" src="" alt="logo" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ratingComponent">
+                  <div class="ratingComponent__rating">
+                    <div
+                      class="ratingComponent__dot ratingComponent__dot--halfFilled"
+                    ></div>
+                    <div
+                      class="ratingComponent__dot ratingComponent__dot--filled"
+                    ></div>
+                    <div
+                      class="ratingComponent__dot ratingComponent__dot--filled"
+                    ></div>
+                    <div
+                      class="ratingComponent__dot ratingComponent__dot--filled"
+                    ></div>
+                    <div
+                      class="ratingComponent__dot ratingComponent__dot--filled"
+                    ></div>
+                  </div>
+                </div>
+                <p id="jane-comment" class="fw-bold"></p>
+                <p id="jane-review"></p>
               </div>
             </div>
           </div>
@@ -572,17 +656,20 @@
         class="d-flex flex-row travel-section-images position-relative gap-2"
       >
         <img
+          id="travel-1"
           class="large-travel-picture"
           src="/images/location/travelImage1.jpg"
           alt="travel-picture"
         />
         <div class="d-flex flex-column gap-2">
           <img
+            id="travel-2"
             class="small-travel-picture"
             src="/images/location/travelImage2.jpg"
             alt="travel-picture"
           />
           <img
+            id="travel-3"
             class="small-travel-picture"
             src="/images/location/travelImage3.jpg"
             alt="travel-picture"
@@ -653,7 +740,7 @@
             <img src="/images/footer/youtubeLogo.svg" alt="youtube" />
           </div>
         </div>
-        <div class="d-flex flex-column p-2" id="alternateStyle">
+        <div class="d-flex flex-column p-2" id="alternate-style">
           <p class="fs-6 text-light">About</p>
           <p class="p-1 m-0">
             <a class="text-decoration-none grey-color" href="#"
@@ -665,14 +752,14 @@
           <p class="grey-color p-1 m-0">Blog</p>
           <p class="grey-color p-1 m-0">Gift Cards</p>
         </div>
-        <div class="d-flex flex-column p-2" id="alternateStyle">
+        <div class="d-flex flex-column p-2" id="alternate-style">
           <p class="fs-6 text-light">Services</p>
           <p class="grey-color p-1 m-0">spa</p>
           <p class="grey-color p-1 m-0">Experience</p>
           <p class="grey-color p-1 m-0">Dining</p>
           <p class="grey-color p-1 m-0">Event</p>
         </div>
-        <div class="d-flex flex-column p-2" id="alternateStyle">
+        <div class="d-flex flex-column p-2" id="alternate-style">
           <p class="fs-6 text-light">Quick Links</p>
           <p class="grey-color p-1 m-0">Facilities</p>
           <p class="grey-color p-1 m-0">Accomodation</p>
