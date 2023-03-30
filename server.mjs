@@ -6,7 +6,7 @@ const port = 200;
 
 function getRequestData(req) {
   if (req.url === "/") {
-    let status = 200;
+    const status = 200;
     return JSON.stringify({
       status,
       topBanner: links.topBanner,

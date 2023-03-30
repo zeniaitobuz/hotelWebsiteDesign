@@ -1,4 +1,4 @@
-export const topBanner = "https://i.ibb.co/m8fMfv9/top-Banner.jpg";
+export const topBanner = "https://i.ibb.co/p2X00Tv/image.jpg";
 
 export const room1 =
   "https://media-cdn.tripadvisor.com/media/photo-s/1b/f4/64/09/aerial-view.jpg";
