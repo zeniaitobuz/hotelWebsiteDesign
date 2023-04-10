@@ -12,6 +12,7 @@ body {
 .bluish-grey-color {
   color: #4a4867;
 }
+
 .deep-blue-color {
   color: #05014a !important;
 }
@@ -33,10 +34,12 @@ body {
 .pink-text {
   color: rgb(231, 157, 155);
 }
+
 #navbarMenu {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
 }
+
 .navbar-subheading {
   font-size: 0.5rem;
 }
@@ -51,9 +54,13 @@ body {
 
 .page-form {
   background: #ffffff;
-  width: 80%;
+  max-width: 100%;
   height: fit-content;
-  margin-right: 5%;
+}
+
+#check-in,
+#check-out {
+ font-size: 0.75rem;
 }
 
 .page-banner-form-buttom {
@@ -79,49 +86,44 @@ body {
   border: none;
 }
 
-.page-banner-form img {
-  width: 15%;
-}
-
-.form-date-inputs {
-  width: 35%;
-  font-size: smaller;
-}
-
 .hotel-images {
-  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: -20%;
+  /* height: fit-content; */
 }
+
 .room-1 {
   z-index: 1;
-  top: 1vh;
-  width: 48vw;
+  max-width: 22vw ;
+}
+.room-2 {
+  max-width: 30vw ;
+  margin-top: 20%;
+  margin-left: 35%;
+  z-index: 2;
 }
 
 .room-3 {
-  width: 55vw;
-  top: 25rem;
-  margin-left: -3.5rem;
+  max-width: 30vw ;
+  margin-top: 55%;
+  margin-left: 15%;
   z-index: 3;
-  padding-left: 4rem;
-}
-
-.room-2 {
-  width: 55vw;
-  top: 15rem;
-  left: -3.5rem;
-  z-index: 2;
-  padding-left: 4rem;
-  padding-bottom: 4rem;
-  margin-bottom: 5rem;
 }
 
 .show-rooms {
   flex-direction: column;
+  z-index: 1;
+  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(111, 105, 170, 0.7429096638655462) 52%, rgba(119, 111, 213, 1) 100%);
 }
 
 .show-room-details {
   color: #ffffff;
   padding: 1rem;
+  max-height: 30rem;
+  width: 100%;
+  z-index: 3;
 }
 
 .show-room-details button {
@@ -129,6 +131,7 @@ body {
 }
 
 .show-room-pictures {
+  z-index: 2;
   width: 100%;
   overflow: hidden;
   height: 70vh;
@@ -143,7 +146,7 @@ body {
 .show-room-pictures-previous-button,
 .show-room-pictures-next-button {
   background: transparent;
-  color: #ffffff;
+  color: #0a063d;
   border: none;
   position: absolute;
   transition: all 0.2s ease-in-out;
@@ -166,6 +169,7 @@ body {
 .slide {
   transition: 0.5s all ease-in-out;
 }
+
 
 .section-why-choose-our-hostel {
   flex-direction: column;
@@ -201,7 +205,7 @@ body {
   margin-top: 2rem;
 }
 
-.services-banner > div {
+.services-banner>div {
   background-color: #ffffff;
   width: 70%;
   height: fit-content;
@@ -212,6 +216,7 @@ body {
 .reviews {
   background-color: #fefaf6;
 }
+
 .review-name {
   width: 65%;
   margin: -30% 0 0 20%;
@@ -221,6 +226,7 @@ body {
   width: 20%;
   margin: -35% 0 0 85%;
 }
+
 .ratingComponent {
   margin-left: -65%;
   text-align: center;
@@ -233,6 +239,7 @@ body {
   align-content: center;
   justify-content: center;
 }
+
 .ratingComponent__dot {
   background-color: transparent;
   border: solid 2px #06ca78;
@@ -241,15 +248,18 @@ body {
   border-radius: 50%;
   margin: 0 5px 0 0;
 }
+
 .ratingComponent__dot--filled {
   background-color: #06ca78;
 }
+
 .ratingComponent__dot--halfFilled {
   background-color: #06ca78;
   width: 9px;
   border-radius: 10px 0 0 10px;
   margin-right: 15px;
 }
+
 .ratingComponent__dot--halfFilled::after {
   content: "";
   display: block;
@@ -284,7 +294,7 @@ body {
   height: 20%;
 }
 
-.location-map > p > iframe {
+.location-map>p>iframe {
   width: 100%;
   height: 40vh;
 }
@@ -304,13 +314,13 @@ body {
   align-items: center;
 }
 
-.update-section > div {
+.update-section>div {
   border: 0.5px solid #666362;
   padding: 0.7rem;
   width: 95%;
 }
 
-.update-section > div > input {
+.update-section>div>input {
   border: none;
   width: 80%;
 }
@@ -319,7 +329,7 @@ footer {
   padding: 5%;
 }
 
-footer > div {
+footer>div {
   flex-direction: column;
 }
 
@@ -342,7 +352,7 @@ footer hr {
   display: flex;
 }
 
-.select-language-footer > div {
+.select-language-footer>div {
   display: none !important;
 }
 
@@ -359,6 +369,9 @@ footer hr {
   .page-banner {
     flex-direction: row;
   }
+  .page-banner-heading-button {
+    width: 25%;
+  }
 
   .page-banner-heading {
     width: 50%;
@@ -368,20 +381,21 @@ footer hr {
     width: 60%;
   }
 
-  .page-banner-form {
+  .page-form {
     width: 30%;
     height: fit-content;
-    left: -8%;
-  }
-
-  .form-date-inputs {
-    width: 48%;
-    font-size: medium;
+    left: -5%;
   }
 
   #check-in,
   #check-out {
-    width: 30vw;
+   font-size: 1rem;
+  }
+  
+
+  .form-date-inputs {
+    width: 100%;
+    font-size: medium;
   }
 
   .page-banner-right-arrow {
@@ -392,25 +406,16 @@ footer hr {
     padding: 10%;
   }
 
-  .room-1 {
-    top: -2rem;
-    left: 2rem;
-    width: 70%;
-  }
-
-  .room-2 {
-    width: 70%;
-    top: 11rem;
-    left: 6rem;
-  }
-
-  .room-3 {
-    width: 75%;
-    top: 20rem;
-    left: 3rem;
-  }
   .show-rooms {
+    margin: 0 3% 0 3%;
     flex-direction: row;
+    padding: 3% 10% 3% 10%;
+  }
+
+  .show-room-details {
+    position: absolute;
+    max-height: 30rem;
+    max-width: 28rem;
   }
 
   .section-why-choose-our-hostel {
@@ -425,21 +430,26 @@ footer hr {
   .activity-pool-smile-img {
     width: 50%;
   }
+
   .activity-pool-smile img {
     width: 100%;
   }
+
   .activity-pool-smile-details {
     width: 50%;
     padding: 5%;
   }
+
   .services {
     width: 22%;
   }
+
   .hello-service {
     width: 50% !important;
     margin-top: 5%;
   }
-  .services-banner > div {
+
+  .services-banner>div {
     width: 30%;
     height: fit-content;
     position: relative;
@@ -470,7 +480,7 @@ footer hr {
     width: 50%;
   }
 
-  .location-map > p > iframe {
+  .location-map>p>iframe {
     padding: 10% 10% 10% 0;
     width: 100%;
     height: 90vh;
@@ -497,11 +507,11 @@ footer hr {
     width: 220% !important;
   }
 
-  .update-section > div {
+  .update-section>div {
     width: 45%;
   }
 
-  footer > div {
+  footer>div {
     flex-direction: row;
   }
 
@@ -509,7 +519,7 @@ footer hr {
     width: 10%;
   }
 
-  footer > div > div {
+  footer>div>div {
     width: 15%;
   }
 
@@ -517,7 +527,7 @@ footer hr {
     display: flex;
   }
 
-  .select-language-footer > div {
+  .select-language-footer>div {
     display: flex !important;
     right: 0;
   }
@@ -542,23 +552,33 @@ footer hr {
     width: 90%;
     margin: -10% 0 0 -11%;
   }
+
+  .show-room-details {
+    position: absolute;
+    width: 50%;
+  }
+
   .trip {
     width: 45%;
     margin-top: -130%;
   }
+
   .ratingComponent {
     margin-left: -35%;
   }
 }
+
 @media screen and (min-width: 411px) and (max-width: 767px) {
   .review-name {
     width: 70%;
     margin: -21% 0 0 25%;
   }
+
   .trip {
     width: 25%;
     margin: -30% 0 0 75%;
   }
+
   .ratingComponent {
     margin-left: -75%;
   }

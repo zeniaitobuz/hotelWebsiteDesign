@@ -23,6 +23,7 @@
       rel="stylesheet"
     />
   </head>
+
   <body>
     <!-- navBar section starts here -->
     <header>
@@ -95,7 +96,7 @@
                   <option value="EN2">EN2</option>
                 </select>
                 <img
-                  src="/images/navigationBar/navigationBarShopIcon.png"
+                  src="./images/navigationBar/navigationBarShopIcon.png"
                   alt="shopping-bag-logo"
                 />
               </div>
@@ -120,7 +121,7 @@
             Quite and endlessly beautiful hideaway
           </p>
           <div
-            class="d-flex gap-4 flex-row align-items-center justify-content-center"
+            class="d-flex gap-4 flex-row align-items-center justify-content-left"
           >
             <button class="page-banner-heading-button">
               <a
@@ -144,15 +145,14 @@
         <form
           onsubmit="formDataSender(event)"
           id="page-banner-form"
-          class="position-relative page-form p-4 d-flex flex-column gap-3 align-items-center justify-content-center"
+          class="p-2 position-relative page-form p-4 d-flex flex-column gap-3 justify-content-center"
         >
           <p class="fs-1 text-left deep-blue-color mb-0">Search Room</p>
           <p id="alternate-style">Get the latest on our COVID-19 response</p>
-          <div
-            class="d-flex flex-row gap-2 justify-content-center gap-2"
-            id="alternate-style"
-          >
-            <div class="form-date-inputs d-flex flex-column gap-2">
+          <div class="d-flex flex-row gap-3" id="alternate-style">
+            <div
+              class="form-date-inputs-in w-50 justify-content-flex-start d-flex flex-column"
+            >
               <div class="d-flex flex-row">
                 <label for="" class="deep-blue-color">Checkin *</label>
               </div>
@@ -164,7 +164,9 @@
                 required
               />
             </div>
-            <div class="form-date-inputs d-flex flex-column gap-2">
+            <div
+              class="form-date-inputs-out w-50 justify-content-flex-end d-flex flex-column"
+            >
               <div class="d-flex flex-row">
                 <label for="" class="deep-blue-color">Checkout *</label>
               </div>
@@ -225,7 +227,7 @@
 
     <!-- welcome section starts here -->
     <section
-      class="p-3 d-flex flex-wrap justify-content-around align-items-center position-relative homestay-adds"
+      class="p-3 d-flex flex-row flex-wrap justify-content-around align-items-center position-relative homestay-adds"
     >
       <div class="d-flex gap-4 flex-column w-50 hotel-details">
         <p class="deep-blue-color">WELCOME TO</p>
@@ -237,23 +239,21 @@
         <img id="signature-img" class="w-50" src="" alt="signature" />
       </div>
       <div class="position-relative w-50 hotel-images">
-        <div class="images">
-          <img class="room-1 position-absolute" id="room-1" alt="hotel-img" />
-          <img class="room-3 position-relative" id="room-2" alt="homestay-img" />
-          <img class="room-2 position-absolute" id="room-3" alt="hotel-img" />
-        </div>
+        <img class="room-1 position-relative" id="room-1" alt="hotel-img" />
+        <img class="room-2 position-absolute" id="room-3" alt="hotel-img" />
+        <img class="room-3 position-absolute" id="room-2" alt="homestay-img" />
       </div>
     </section>
     <!-- welcome section ends here -->
 
     <!-- imageSlider section starts here -->
-    <section class="p-4 show-rooms d-flex position-relative gap-1">
+    <section class="show-rooms d-flex position-relative gap-1">
       <div
         class="d-flex justify-content-center deep-blue-background-color show-room-details"
       >
-        <div class="w-75 d-flex flex-column justify-content-start">
+        <div class="d-flex flex-column justify-content-start">
           <p class="pink-text">ELEGANCE AND COMFORT</p>
-          <p id="show-room-heading" class="display-4">STANDARD ROOM</p>
+          <p id="show-room-heading" class="display-5">STANDARD ROOM</p>
           <p class="alternate-style" id="show-room-price">From $150/night</p>
           <p class="alternate-style" id="show-room-details">
             Comfortable rooms at comfortable pricings.
@@ -284,28 +284,28 @@
       </div>
       <div class="show-room-pictures position-relative">
         <img id="slide-1" class="slide" alt="room" />
-        <img id="slide-2" class="slide" alt="room" />
-        <img id="slide-3" class="slide" alt="room" />
-        <button
-          class="p-4 show-room-pictures-previous-button"
-          onclick="previousSlide()"
-          id="alternate-style"
-        >
-          ◀
-        </button>
-        <button
-          class="p-4 show-room-pictures-next-button"
-          onclick="nextSlide()"
-          id="alternate-style"
-        >
-          ▶
-        </button>
+        <!-- <img id="slide-2" class="slide" alt="room" />
+      <img id="slide-3" class="slide" alt="room" /> -->
       </div>
+      <button
+        class="p-4 show-room-pictures-previous-button"
+        onclick="previousSlide()"
+        id="alternate-style"
+      >
+        ◀
+      </button>
+      <button
+        class="p-4 show-room-pictures-next-button"
+        onclick="nextSlide()"
+        id="alternate-style"
+      >
+        ▶
+      </button>
     </section>
     <!-- imageSlider section ends here -->
 
     <!-- chooseHotel section starts here-->
-    <section class="d-flex flex-column gap-2">
+    <section class="d-flex flex-column mt-5 gap-2">
       <div class="d-flex flex-column">
         <p class="text-center display-4">Why choose our Hotel?</p>
         <div
@@ -438,7 +438,7 @@
           <img class="w-100" id="adventure-service" alt="adventure" />
           <p id="adventure-service-heading" class="deep-blue-color"></p>
           <p id="adventure-service-subheading" class="fs-4"></p>
-          <p id="adventure-service-details"></p>
+          <p id="adventure-service-details" class="bluish-grey-color"></p>
           <a class="text-decoration-none deep-blue-color" href="#"
             >Discover more →</a
           >
@@ -448,7 +448,7 @@
         <button class="btn text-center">
           <a
             class="text-decoration-none deep-blue-color p-2 text-center"
-            href="#"
+            href="./pages/services.html"
             >View all services</a
           >
         </button>

@@ -1,5 +1,6 @@
 const slides = document.querySelectorAll(".slide");
 const form = document.getElementById("page-banner-form");
+
 let counter = 0;
 
 async function fetchData() {
@@ -67,11 +68,25 @@ async function fetchData() {
       document.getElementById("pool-img").src = response.poolImg;
       document.getElementById("forest-img").src = response.forestImg;
 
-      document.getElementById("slide-1").src =
-        response.showRooms.standardRoom.url;
-      document.getElementById("slide-2").src = response.showRooms.suite.url;
-      document.getElementById("slide-3").src =
-        response.showRooms.presidentSuite.url;
+      Object.keys(response.showRooms).forEach((key, index) => {
+        if (counter === index) {
+          document.getElementById("slide-1").src = response.showRooms[key].url;
+          document.getElementById("show-room-heading").textContent =
+          response.showRooms[key].heading;
+        document.getElementById("show-room-price").textContent =
+          response.showRooms[key].price;
+        document.getElementById("show-room-details").textContent =
+          response.showRooms[key].details;
+        document.getElementById("bed-size").textContent =
+          response.showRooms[key].bedSize;
+        document.getElementById("capacity").textContent =
+          response.showRooms[key].capacity;
+        document.getElementById("room-size").textContent =
+          response.showRooms[key].roomSize;
+        document.getElementById("hotel-view").textContent =
+          response.showRooms[key].hotelView;
+        }
+      });
 
       document.getElementById("selena-img").src = response.reviews.selena.url;
       document.getElementById("selena-name").textContent =
@@ -121,68 +136,8 @@ async function fetchData() {
 }
 fetchData();
 
-async function changedata() {
-  const response = await fetch(`http://localhost:200/`)
-    .then(function (res) {
-      return res.json();
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-  if (response.error) {
-    alert(response.error.message);
-  } else {
-    if (counter === 0) {
-      document.getElementById("show-room-heading").textContent =
-        response.showRooms.standardRoom.heading;
-      document.getElementById("show-room-price").textContent =
-        response.showRooms.standardRoom.price;
-      document.getElementById("show-room-details").textContent =
-        response.showRooms.standardRoom.details;
-      document.getElementById("bed-size").textContent =
-        response.showRooms.standardRoom.bedSize;
-      document.getElementById("capacity").textContent =
-        response.showRooms.standardRoom.capacity;
-      document.getElementById("room-size").textContent =
-        response.showRooms.standardRoom.roomSize;
-      document.getElementById("hotel-view").textContent =
-        response.showRooms.standardRoom.hotelView;
-    } else if (counter === 1) {
-      document.getElementById("show-room-heading").textContent =
-        response.showRooms.suite.heading;
-      document.getElementById("show-room-price").textContent =
-        response.showRooms.suite.price;
-      document.getElementById("show-room-details").textContent =
-        response.showRooms.suite.details;
-      document.getElementById("bed-size").textContent =
-        response.showRooms.suite.bedSize;
-      document.getElementById("capacity").textContent =
-        response.showRooms.suite.capacity;
-      document.getElementById("room-size").textContent =
-        response.showRooms.suite.roomSize;
-      document.getElementById("hotel-view").textContent =
-        response.showRooms.suite.hotelView;
-    } else if (counter === 2) {
-      document.getElementById("show-room-heading").textContent =
-        response.showRooms.presidentSuite.heading;
-      document.getElementById("show-room-price").textContent =
-        response.showRooms.presidentSuite.price;
-      document.getElementById("show-room-details").textContent =
-        response.showRooms.presidentSuite.details;
-      document.getElementById("bed-size").textContent =
-        response.showRooms.presidentSuite.bedSize;
-      document.getElementById("capacity").textContent =
-        response.showRooms.presidentSuite.capacity;
-      document.getElementById("room-size").textContent =
-        response.showRooms.presidentSuite.roomSize;
-      document.getElementById("hotel-view").textContent =
-        response.showRooms.presidentSuite.hotelView;
-    }
-  }
-}
-
 slides.forEach((slide, index) => {
-  slide.style.left = `${index * 150}%`;
+  slide.style.left = `${index}%`;
 });
 
 const previousSlide = () => {
@@ -191,17 +146,17 @@ const previousSlide = () => {
     counter = counter + 3;
   }
   slideImage();
-  changedata();
+  fetchData();
 };
 const nextSlide = () => {
   counter = (counter + 1) % 3;
   slideImage();
-  changedata();
+  fetchData();
 };
 
 const slideImage = () => {
   slides.forEach((slide) => {
-    slide.style.transform = `translateX(-${counter * 150}%)`;
+    slide.style.transform = `translateX(0)`;
   });
 };
 
